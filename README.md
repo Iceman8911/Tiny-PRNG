@@ -28,16 +28,12 @@ const currentSeed = generator.seed
 
 ##### Install
 ```
-npm install tiny-prng
+npm i @iceman8911/tiny-prng
 ```
 
 ##### Import
 ```javascript
-const PRNG = require('tiny-prng')
-```
-or
-```javascript
-import PRNG from 'tiny-prng'
+import { PRNG } from 'tiny-prng'
 ```
 
 
