@@ -58,5 +58,13 @@
 		"typescript": {
 			"optional": true
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Iceman8911/Tiny-PRNG.git"
+	},
+	"homepage": "https://github.com/Iceman8911/Tiny-PRNG#readme",
+	"bugs": {
+		"url": "https://github.com/Iceman8911/Tiny-PRNG/issues"
 	}
 }
