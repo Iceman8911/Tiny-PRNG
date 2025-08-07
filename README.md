@@ -48,7 +48,4 @@ import PRNG from 'tiny-prng'
 <script src="https://cdn.patricktriest.com/vendor/prng/prng.min.js"></script>
 ```
 
-### Distribution Test
-To verify that the PRNG generates a valid random(flat) distribution of possible values, the `test` directory contains a simple webpage + webworker that will generate batches of 1,000,000 pseudorandom, and continuously plot the distribution.  To view this visualization, run `http-server .` and open `http://localhost/test/`.
-
 You can also view this distribution test at [https://cdn.patricktriest.com/vendor/prng/test/index.html](https://cdn.patricktriest.com/vendor/prng/test/index.html)
