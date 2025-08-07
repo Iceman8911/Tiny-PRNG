@@ -1,6 +1,6 @@
 {
 	"name": "tiny-prng",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Simple 1kb Lehmer / Park-Miller pseudorandom number generator",
 	"type": "module",
 	"files": [
