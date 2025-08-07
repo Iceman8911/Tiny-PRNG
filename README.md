@@ -20,6 +20,8 @@ let valueFloat = generator.nextFloat()
 // Get the next pseudorandom number between 1000 and 9999
 let valueBounded = generator.nextBoundedInt(1000, 9999)
 
+// Get the current value of the seed for persistence
+const currentSeed = generator.seed
 ```
 
 #### NPM / Browserify / Webpack
