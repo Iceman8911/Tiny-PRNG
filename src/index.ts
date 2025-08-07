@@ -44,6 +44,14 @@ class PRNG {
 	nextBoundedInt(min: number, max: number): number {
 		return Math.floor(this.nextFloat() * (max - min) + min);
 	}
+
+	/** Returns the current seed.
+	 *
+	 * You can use this for persistence or to reinitialize the PRNG with the same seed.
+	 */
+	get seed(): number {
+		return this.#seed;
+	}
 }
 
 export { PRNG };
