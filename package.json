@@ -1,5 +1,5 @@
 {
-	"name": "tiny-prng",
+	"name": "@iceman8911/tiny-prng",
 	"version": "0.1.0",
 	"description": "Simple 1kb Lehmer / Park-Miller pseudorandom number generator",
 	"type": "module",
@@ -37,6 +37,9 @@
 		"prepare": "husky"
 	},
 	"author": "patrick.triest@gmail.com",
+	"contributors": [
+		"iceman8911"
+	],
 	"license": "MIT",
 	"devDependencies": {
 		"@biomejs/biome": "^2.1.3",
