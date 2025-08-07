@@ -37,7 +37,7 @@ class PRNG {
 	/** Return a pseudo-random floating point number in range [0, 1] */
 	nextFloat(): number {
 		// We know that result of next() will be 1 to 2147483646 (inclusive)
-		return (this.next() - 1) / MAX_INT - 1;
+		return (this.next() - 1) / (MAX_INT - 1);
 	}
 
 	/** Return pseudo-random int between 0 and the specified max */
