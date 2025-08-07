@@ -20,6 +20,8 @@ let valueFloat = generator.nextFloat()
 // Get the next pseudorandom number between 1000 and 9999
 let valueBounded = generator.nextBoundedInt(1000, 9999)
 
+// Get the current value of the seed for persistence
+const currentSeed = generator.seed
 ```
 
 #### NPM / Browserify / Webpack
@@ -45,8 +47,5 @@ import PRNG from 'tiny-prng'
 ```html
 <script src="https://cdn.patricktriest.com/vendor/prng/prng.min.js"></script>
 ```
-
-### Distribution Test
-To verify that the PRNG generates a valid random(flat) distribution of possible values, the `test` directory contains a simple webpage + webworker that will generate batches of 1,000,000 pseudorandom, and continuously plot the distribution.  To view this visualization, run `http-server .` and open `http://localhost/test/`.
 
 You can also view this distribution test at [https://cdn.patricktriest.com/vendor/prng/test/index.html](https://cdn.patricktriest.com/vendor/prng/test/index.html)
