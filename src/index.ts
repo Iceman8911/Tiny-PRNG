@@ -27,7 +27,7 @@ class PRNG {
 	}
 
 	/** Return a pseudo-random value between 1 and n */
-	next() {
+	next(): number {
 		// x_k+1 = (g * x_k) % n
 		this.#seed = (this.#seed * 16807) % MAX_INT;
 
@@ -35,14 +35,22 @@ class PRNG {
 	}
 
 	/** Return a pseudo-random floating point number in range [0, 1] */
-	nextFloat() {
+	nextFloat(): number {
 		// We know that result of next() will be 1 to 2147483646 (inclusive)
-		return (this.next() - 1) / MAX_INT - 1;
+		return (this.next() - 1) / (MAX_INT - 1);
 	}
 
 	/** Return pseudo-random int between 0 and the specified max */
-	nextBoundedInt(min: number, max: number) {
+	nextBoundedInt(min: number, max: number): number {
 		return Math.floor(this.nextFloat() * (max - min) + min);
+	}
+
+	/** Returns the current seed.
+	 *
+	 * You can use this for persistence or to reinitialize the PRNG with the same seed.
+	 */
+	get seed(): number {
+		return this.#seed;
 	}
 }
 
