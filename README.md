@@ -33,15 +33,5 @@ npm i @iceman8911/tiny-prng
 
 ##### Import
 ```javascript
-import { PRNG } from 'tiny-prng'
+import { PRNG } from '@iceman8911/tiny-prng'
 ```
-
-
-#### Browser Script Tag
-
-##### Import
-```html
-<script src="https://cdn.patricktriest.com/vendor/prng/prng.min.js"></script>
-```
-
-You can also view this distribution test at [https://cdn.patricktriest.com/vendor/prng/test/index.html](https://cdn.patricktriest.com/vendor/prng/test/index.html)
