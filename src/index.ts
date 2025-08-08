@@ -22,7 +22,7 @@ class PRNG {
 
 		if (this.#seed <= 0) {
 			// If seed is negative or zero, add n
-			this.#seed += MAX_INT - 1;
+			this.#seed += MAX_INT - MIN_INT;
 		}
 	}
 
@@ -37,7 +37,7 @@ class PRNG {
 	/** Return a pseudo-random floating point number in range [0, 1] */
 	nextFloat(): number {
 		// We know that result of next() will be 1 to 2147483646 (inclusive)
-		return (this.next() - 1) / (MAX_INT - 1);
+		return (this.next() - MIN_INT) / (MAX_INT - MIN_INT);
 	}
 
 	/** Return pseudo-random int between 0 and the specified max */
