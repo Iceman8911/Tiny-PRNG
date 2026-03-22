@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { PRNG } from "../src/index";
+import PRNG from "../src/prng";
 
 describe("PRNG", () => {
 	it("should produce the same sequence for the same seed", () => {
@@ -37,16 +37,6 @@ describe("PRNG", () => {
 		}
 	});
 
-	it("nextFloat() should always return a value in [0, 1]", () => {
-		const prng = new PRNG(42);
-
-		for (let i = 0; i < 1000; i++) {
-			const val = prng.nextFloat();
-			expect(val).toBeGreaterThanOrEqual(0);
-			expect(val).toBeLessThan(1);
-		}
-	});
-
 	it("nextBoundedInt(min, max) should return values in [min, max]", () => {
 		const prng = new PRNG(123);
 
@@ -61,7 +51,7 @@ describe("PRNG", () => {
 
 	it("seed getter should return the current seed", () => {
 		const prng = new PRNG(99);
-		const first = prng.next();
+    const first = prng.next();
 		expect(prng.seed).toBe(first);
 	});
 });

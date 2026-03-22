@@ -1,25 +1,33 @@
 {
 	"name": "@iceman8911/tiny-prng",
-	"version": "0.1.2",
 	"description": "Simple 1kb Lehmer / Park-Miller pseudorandom number generator",
+	"version": "0.1.2",
 	"type": "module",
 	"files": [
 		"dist"
 	],
-	"module": "./dist/index.js",
-	"main": "./dist/index.cjs",
-	"types": "./dist/index.d.ts",
 	"exports": {
-		".": {
+		"./prng": {
 			"import": {
-				"types": "./dist/index.d.ts",
-				"default": "./dist/index.js"
+				"types": "./dist/prng.d.ts",
+				"default": "./dist/prng.js"
 			},
 			"require": {
-				"types": "./dist/index.d.cts",
-				"default": "./dist/index.cjs"
+				"types": "./dist/prng.d.cts",
+				"default": "./dist/prng.cjs"
 			}
-		}
+		},
+		"./prng-immutable": {
+			"import": {
+				"types": "./dist/prng-immutable.d.ts",
+				"default": "./dist/prng-immutable.js"
+			},
+			"require": {
+				"types": "./dist/prng-immutable.d.cts",
+				"default": "./dist/prng-immutable.cjs"
+			}
+		},
+		"./package.json": "./package.json"
 	},
 	"scripts": {
 		"build": "bunup",
